@@ -1,5 +1,5 @@
 {
-  "name": "webpack-three-js-template",
+  "name": "fsn-three-js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,17 +7,9 @@
     "build": "webpack --config ./bundler/webpack.prod.js",
     "dev": "webpack-dev-server --config ./bundler/webpack.dev.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brunosimon/webpack-three-js-template.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/brunosimon/webpack-three-js-template/issues"
-  },
-  "homepage": "https://github.com/brunosimon/webpack-three-js-template#readme",
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",

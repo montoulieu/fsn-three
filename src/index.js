@@ -29,7 +29,7 @@ window.addEventListener('resize', () =>
 const scene = new THREE.Scene()
 
 // Camera
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100)
 camera.position.z = 3
 scene.add(camera)
 
@@ -49,7 +49,7 @@ for (let i = 0; i < gridRows; i++) {
         }
         const cube = new THREE.Mesh(
             new THREE.BoxGeometry(1, 1, .25),
-            new THREE.MeshPhongMaterial({ color: 'cyan' })
+            new THREE.MeshLambertMaterial({ color: 'cyan' })
         )
 
         cube.position.x = -gridColumns + i * 2
@@ -62,9 +62,10 @@ for (let i = 0; i < gridRows; i++) {
 // const cube = new THREE.Mesh(new THREE.BoxBufferGeometry(1, 1, 0.25), new THREE.MeshNormalMaterial())
 // cube.position.set(-4, 4 , 0)
 // gridGroup.add(cube)
-				const dirLight1 = new THREE.DirectionalLight( 0xffffff );
-				dirLight1.position.set( 1, 1, 1 );
-				scene.add( dirLight1 );
+const dirLight1 = new THREE.DirectionalLight( 0xffffff );
+dirLight1.position.set(1, 1, 2);
+scene.add(dirLight1);
+
 // Plane
 const geometry = new THREE.PlaneGeometry( gridCointainerWidth, gridCointainerHeight );
 const material = new THREE.MeshBasicMaterial( {color: '#FF69B4', side: THREE.DoubleSide} );
